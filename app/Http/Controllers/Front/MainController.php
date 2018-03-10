@@ -105,14 +105,45 @@ class MainController extends Controller
      * Categories list
      */
     public function categories() {
-        echo "works";
+        $categories = Category::orderBy('name', 'asc')->get();
+
+        return view('front.categories')->with(compact('categories'));
     }
 
     /**
      * Show the posts of specific category
      */
     public function showCategory($id) {
-        echo "works".$id;
+        $category   = Category::where('id', $id)->first();
+        $posts      = Post::where('category_id', $id)->get();
+
+        foreach( $posts as $post ){
+            // Get Author
+            $author = User::where('id', $post->author_id)->first();
+            $post->author = $author->name;
+
+            // Convert timestamp to date
+            $current = Carbon::now()->addHours(4); // Current date and time UTC+4
+            $date      = $post->created_at; // Post's creation date and time
+
+            // If post created more than 24 hours ago
+            if (($date->diffInDays($current)) >= 1){
+                $post->date = date("j F Y ", strtotime($date));
+            }
+            // If post created between 1 and 24 hours ago
+            elseif (($date->diffInHours($current)) >= 1){
+                $hour = $date->diffInHours($current);
+                $post->date = $hour.' hours ago';
+            }
+            // If post created less than 1 hour
+            elseif (($date->diffInMinutes($current)) < 60){
+                $minute = $date->diffInMinutes($current);
+                $post->date = $minute.' minutes ago';
+            }
+        }
+
+
+        return view('front.post-list')->with(compact('posts', 'category'));
     }
 
     /**

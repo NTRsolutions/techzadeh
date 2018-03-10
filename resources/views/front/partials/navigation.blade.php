@@ -28,10 +28,9 @@
                         <li class="nav__dropdown">
                             <a href="/categories">Categories</a>
                             <ul class="nav__dropdown-menu">
-                                <li><a href="single-post.html">Technology</a></li>
-                                <li><a href="single-post.html">Science</a></li>
-                                <li><a href="single-post.html">Lifestyle</a></li>
-                                <li><a href="single-post.html">Mobile</a></li>
+                                @foreach($categories as $category)
+                                <li><a href="/category/{{ $category->id }}">{{ $category->name }}</a></li>
+                                @endforeach
                             </ul>
                         </li>
 

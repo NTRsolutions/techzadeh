@@ -5,6 +5,7 @@ namespace TechZadeh\Providers;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use TechZadeh\Category;
 use TechZadeh\Post;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,9 +23,12 @@ class AppServiceProvider extends ServiceProvider
                                                                         ->orderBy('view_count', 'desc')
                                                                         ->take(5)
                                                                         ->get();
+
+        // Categories list
+        $categories = Category::orderBy('name', 'asc')->get();
+
+        View::share('categories', $categories);
         View::share('popular_posts', $popular_posts);
-
-
     }
 
     /**
