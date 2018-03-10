@@ -1,0 +1,52 @@
+<section class="section-wrap pt-40">
+    <div class="container">
+
+        <h3 class="section-title">Latest Videos</h3>
+
+        <div class="video-playlist">
+
+            <div class="video-playlist__content thumb-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.youtube.com/embed/mn6Ia5e_suY?feature=oembed" class="video-playlist__content-video">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="video-playlist__list">
+                <a href="https://www.youtube.com/embed/mn6Ia5e_suY?feature=oembed&autoplay=1" class="video-playlist__list-item video-playlist__list-item--active">
+                    <div class="video-playlist__list-item-thumb thumb-container">
+                        <img data-src="https://i.ytimg.com/vi/mn6Ia5e_suY/default.jpg" src="https://i.ytimg.com/vi/mn6Ia5e_suY/default.jpg" class="video-playlist__list-item-img lazyload" alt="">
+                    </div>
+                    <div class="video-playlist__list-item-description">
+                        <h4 class="video-playlist__list-item-title">Top 5 New Tech Gadgets You Must Have In 2017</h4>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/embed/x68XnWszi2A?feature=oembed&autoplay=1" class="video-playlist__list-item">
+                    <div class="video-playlist__list-item-thumb thumb-container">
+                        <img data-src="https://i.ytimg.com/vi/x68XnWszi2A/default.jpg" src="https://i.ytimg.com/vi/mn6Ia5e_suY/default.jpg" class="video-playlist__list-item-img lazyload" alt="">
+                    </div>
+                    <div class="video-playlist__list-item-description">
+                        <h4 class="video-playlist__list-item-title">10 Amazing Gadgets You Can Buy Now On Amazon</h4>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/embed/TXFrCy47ue8?feature=oembed&autoplay=1" class="video-playlist__list-item">
+                    <div class="video-playlist__list-item-thumb thumb-container">
+                        <img data-src="https://i.ytimg.com/vi/TXFrCy47ue8/default.jpg" src="https://i.ytimg.com/vi/mn6Ia5e_suY/default.jpg" class="video-playlist__list-item-img lazyload" alt="">
+                    </div>
+                    <div class="video-playlist__list-item-description">
+                        <h4 class="video-playlist__list-item-title">Top 5 Best Drones with HD Camera (Cheap and Affordable Version)</h4>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/embed/rdFXddVsUuQ?feature=oembed&autoplay=1" class="video-playlist__list-item">
+                    <div class="video-playlist__list-item-thumb thumb-container">
+                        <img data-src="https://i.ytimg.com/vi/rdFXddVsUuQ/default.jpg" src="https://i.ytimg.com/vi/mn6Ia5e_suY/default.jpg" class="video-playlist__list-item-img lazyload" alt="">
+                    </div>
+                    <div class="video-playlist__list-item-description">
+                        <h4 class="video-playlist__list-item-title">iPhone X Review – Pushing Me to Android</h4>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
